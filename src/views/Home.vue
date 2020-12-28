@@ -28,6 +28,14 @@
         <van-image :src="item.img_url" />
       </van-grid-item>
     </van-grid>
+
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item icon="search">专题</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">分类</van-tabbar-item>
+      <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
+      <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -40,6 +48,7 @@ export default {
     return {
       value: "请输入搜索关键词",
       data: {},
+      active: 0
     };
   },
   computed: {
@@ -88,16 +97,17 @@ export default {
       }
     },
     brandList() {
-      if(this.data.brandList) {
-        return this.data.brandList
+      if (this.data.brandList) {
+        return this.data.brandList;
       } else {
         return [
           {
-            img_url: '//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png'
-          }
-        ]
+            img_url:
+              "//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png",
+          },
+        ];
       }
-    }
+    },
   },
   components: {},
   async mounted() {
