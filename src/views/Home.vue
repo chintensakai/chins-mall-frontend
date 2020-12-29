@@ -28,27 +28,22 @@
         <van-image :src="item.img_url" />
       </van-grid-item>
     </van-grid>
-
-    <van-tabbar v-model="active">
-      <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item icon="search">专题</van-tabbar-item>
-      <van-tabbar-item icon="friends-o">分类</van-tabbar-item>
-      <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
-      <van-tabbar-item icon="user-o">我的</van-tabbar-item>
-    </van-tabbar>
+    <tab-bar></tab-bar>
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import axios from "axios";
+import TabBar from "@/components/TabBar";
+
 export default {
   name: "Home",
   data() {
     return {
       value: "请输入搜索关键词",
-      data: {},
-      active: 0
+      data: {}
     };
   },
   computed: {
@@ -109,7 +104,9 @@ export default {
       }
     },
   },
-  components: {},
+  components: {
+    TabBar
+  },
   async mounted() {
     await axios.get("").then((response) => {
       console.log(response.data);
