@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
 import { Search, Swipe, SwipeItem, Lazyload, Grid, GridItem, Cell, 
-  CellGroup, Image as VanImage, Tabbar, TabbarItem } from 'vant';
+  CellGroup, Image as VanImage, Tabbar, TabbarItem, TreeSelect } from 'vant';
 
 Vue.use(Search);
 Vue.use(Swipe);
@@ -21,6 +21,7 @@ Vue.use(CellGroup);
 Vue.use(VanImage);
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
+Vue.use(TreeSelect);
 
 Vue.config.productionTip = false
 

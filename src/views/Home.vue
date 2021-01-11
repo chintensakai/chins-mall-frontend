@@ -5,7 +5,7 @@
       placeholder="请输入搜索关键词"
       input-align="center"
     />
-    <van-swipe :autoplay="3000" :width="375" :height="200">
+    <van-swipe :autoplay="1500" :width="375" :height="200">
       <van-swipe-item v-for="(image, index) in images" :key="index">
         <img class="swiper-img" v-lazy="image" />
       </van-swipe-item>
