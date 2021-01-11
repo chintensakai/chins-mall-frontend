@@ -35,7 +35,7 @@
 
 <script>
 // @ is an alias to /src
-import axios from "axios";
+// import axios from "axios";
 import TabBar from "@/components/TabBar";
 
 export default {
@@ -108,10 +108,10 @@ export default {
     TabBar
   },
   async mounted() {
-    await axios.get("").then((response) => {
-      console.log(response.data);
-      this.data = response.data;
-    });
+    // await axios.get("https://www.baidu.com").then((response) => {
+    //   console.log(response.data);
+    //   this.data = response.data;
+    // });
   },
 };
 </script>
